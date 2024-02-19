@@ -4,3 +4,6 @@
 ```bash
 gcc *.c -o main
 ```
+```bash
+./main
+```

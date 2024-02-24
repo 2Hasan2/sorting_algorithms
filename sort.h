@@ -35,6 +35,10 @@ void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 
 void counting_sort(int *array, size_t size);
+int get_max(int *array, size_t size);
+void cumulative_sum(int *count, int max);
+int *count_elements(int *array, size_t size, int max);
+void rearrange_elements(int *array, int *output, int *count, size_t size);
 
 void merge_sort(int *array, size_t size);
 void merge_sort_recursive(int *array, int *temp, size_t start, size_t end);

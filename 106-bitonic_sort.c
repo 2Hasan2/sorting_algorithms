@@ -15,13 +15,13 @@ void swap_ints(int *a, int *b)
 
 /**
  * bitonic_merge - Merge two subarrays of integers in a bitonic sequence.
- * @array: An array of integers.
+ * @arr: An array of integers.
  * @size: The size of the array.
  * @start: The starting index of the subarrays to merge.
  * @seq: The size of the subarrays to merge.
  * @flow: The direction to sort the subarrays in.
  */
-void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
+void bitonic_merge(int *arr, size_t size, size_t start, size_t seq,
 				   char flow)
 {
 	size_t i, jump = seq / 2;
@@ -30,12 +30,12 @@ void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
 	{
 		for (i = start; i < start + jump; i++)
 		{
-			if ((flow == 0 && array[i] > array[i + jump]) ||
-				(flow == 1 && array[i] < array[i + jump]))
-				swap_ints(array + i, array + i + jump);
+			if ((flow == 0 && arr[i] > arr[i + jump]) ||
+				(flow == 1 && arr[i] < arr[i + jump]))
+				swap_ints(arr + i, arr + i + jump);
 		}
-		bitonic_merge(array, size, start, jump, flow);
-		bitonic_merge(array, size, start + jump, jump, flow);
+		bitonic_merge(arr, size, start, jump, flow);
+		bitonic_merge(arr, size, start + jump, jump, flow);
 	}
 }
 

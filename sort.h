@@ -43,6 +43,8 @@ void merge_array(int *arr, int *temp, size_t start, size_t middle, size_t end);
 
 void heap_sort(int *array, size_t size);
 
+void bitonic_sort(int *array, size_t size);
+
 void radix_sort(int *array, size_t size);
 
 #endif

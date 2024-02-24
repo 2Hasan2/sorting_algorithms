@@ -42,6 +42,7 @@ void merge_sort_recursive(int *array, int *temp, size_t start, size_t end);
 void merge_array(int *arr, int *temp, size_t start, size_t middle, size_t end);
 
 void heap_sort(int *array, size_t size);
+void heapify(int *array, size_t size, size_t i, size_t size_orig);
 
 void swap_ints(int *a, int *b);
 void bitonic_merge(int *arr, size_t size, size_t start, size_t seq, char flow);

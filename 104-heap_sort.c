@@ -27,3 +27,33 @@ void heap_sort(int *array, size_t size)
 		heapify(array, i, 0, size);
 	}
 }
+
+/**
+ * heapify - Heapifies an array of integers
+ * @array: The array to be heapified
+ * @size: The size of the array
+ * @i: The index of the root
+ * @size_orig: The original size of the array
+ * Return: void
+ */
+
+void heapify(int *array, size_t size, size_t i, size_t size_orig)
+{
+	size_t largest = i, left = 2 * i + 1, right = 2 * i + 2;
+	int temp;
+
+	if (left < size && array[left] > array[largest])
+		largest = left;
+
+	if (right < size && array[right] > array[largest])
+		largest = right;
+
+	if (largest != i)
+	{
+		temp = array[i];
+		array[i] = array[largest];
+		array[largest] = temp;
+		print_array(array, size_orig);
+		heapify(array, size, largest, size_orig);
+	}
+}

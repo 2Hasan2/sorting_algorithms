@@ -45,7 +45,7 @@ void merge_sort_recursive(int *array, int *temp, size_t start, size_t end)
 }
 
 /**
- * merge_arrays - Merges two arrays of integers into one sorted array
+ * merge_array - Merges two arrays of integers into one sorted array
  * @arr: The array to be sorted
  * @temp: A temporary array to store the sorted elements
  * @start: The starting index of the array

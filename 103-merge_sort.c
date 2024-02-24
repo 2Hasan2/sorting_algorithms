@@ -40,13 +40,13 @@ void merge_sort_recursive(int *array, int *temp, size_t start, size_t end)
 		middle = (start + end) / 2;
 		merge_sort_recursive(array, temp, start, middle);
 		merge_sort_recursive(array, temp, middle + 1, end);
-		merge_arrays(array, temp, start, middle, end);
+		merge_array(array, temp, start, middle, end);
 	}
 }
 
 /**
  * merge_arrays - Merges two arrays of integers into one sorted array
- * @array: The array to be sorted
+ * @arr: The array to be sorted
  * @temp: A temporary array to store the sorted elements
  * @start: The starting index of the array
  * @middle: The middle index of the array
@@ -54,7 +54,7 @@ void merge_sort_recursive(int *array, int *temp, size_t start, size_t end)
  * Return: void
  */
 
-void merge_arrays(int *arr, int *temp, size_t start, size_t middle, size_t end)
+void merge_array(int *arr, int *temp, size_t start, size_t middle, size_t end)
 {
 	size_t i, j, k;
 
